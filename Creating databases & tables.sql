@@ -1,0 +1,44 @@
+CREATE DATABASE Pets;
+USE Pets;
+CREATE DATABASE LOL;
+
+
+CREATE TABLE dogs
+(
+    Name VARCHAR(50),
+    Breed VARCHAR(50),
+    Age INT
+);
+
+CREATE TABLE cats 
+(
+    Name VARCHAR(50),
+    Age INT
+);
+
+CREATE TABLE Grabage 
+(
+    Name VARCHAR(41),
+    Length INT
+);
+
+CREATE TABLE pastries 
+(
+    Name VARCHAR(50),
+    Quantity INT
+)
+
+SELECT * FROM Pets.INFORMATION_SCHEMA.TABLES;
+SELECT * FROM pastries;
+SELECT * FROM dogs;
+SELECT * FROM cats;
+
+DROP TABLE pastries;
+
+SELECT * FROM Pets.INFORMATION_SCHEMA.TABLES;
+
+
+
+SELECT DB_NAME();
+
+
