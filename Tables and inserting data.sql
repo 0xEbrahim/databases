@@ -1,0 +1,139 @@
+CREATE DATABASE ebrahim;
+USE ebrahim;
+
+CREATE TABLE hh
+(
+    name varchar(41) primary key,
+    age int not null
+);
+
+CREATE DATABASE Pets;
+USE Pets;
+DROP DATABASE ebrahim;
+
+-- CREATING TABLE CALLED CATS
+
+CREATE TABLE Cats
+(
+ Name VARCHAR(50) NOT NULL ,
+ Age INT NOT NULL
+);
+
+-- CREATING TABLE CALLED DOGS
+CREATE TABLE Dogs
+(
+    -- NOT NULL => MEANS THAT YOU SHOULD THIS COLUMN A VALUE , IT CAN'T BE NULL
+    Name VARCHAR(50) NOT NULL ,
+    Breed VARCHAR(50),
+    Age INT NOT NULL
+);
+
+-- DROPPING TABLE MEANS DELETE IT
+DROP TABLE Dogs;
+
+ -- INSERTION INTO A SPECIFIC TABLE IS DONE USING THIS QUERY
+INSERT INTO Cats(Name, Age)
+VALUES ('MAX',4);
+ -- INSERTION INTO CATS TABLE
+INSERT INTO Cats(NAME, AGE)
+VALUES ('kEVIN' , 8);
+
+INSERT INTO Cats(Age , Name)
+VALUES (12,'REX');
+
+    -- MULTI INSERTION
+INSERT INTO Cats(NAME, AGE)
+VALUES ('Ebrahim' , 20)
+        ,('Ahmed', 23)
+        ,('Saleh', 18);
+
+INSERT INTO Cats(Name,Age)
+VALUES ('TOD', 13);
+
+DROP TABLE Cats;
+
+    -- SHOW WHAT INSIDE THIS TABLE
+SELECT * FROM Cats;
+
+   -- DESCRIBE CATS TABLE
+DESC Cats;
+
+    -- CREATING TABLE CALLED SHOP
+    CREATE TABLE shops
+    (
+        NAME VARCHAR(100) NOT NULL
+    );
+
+
+    -- INSERTION
+    INSERT INTO shops(NAME)
+    VALUES ('shoe shop');
+
+    -- ESCAPING
+     INSERT INTO shops(NAME)
+     VALUES ('MARIO\'S PIZZA');
+
+    -- SHOWING TABLE ELEMENTS
+    SELECT  * FROM shops;
+
+    -- DROPPING TABLE
+    DROP TABLE shops;
+
+    DESC Cats;
+
+    -- CREATING NEW TABLE CATS3
+    CREATE TABLE Cats3
+    (
+        Name VARCHAR(100) DEFAULT 'MYSTERY',
+        AGE INT DEFAULT 99
+    );
+
+    -- INSERTION
+    INSERT INTO Cats3()
+    VALUES ();
+
+    -- MAKING A DEFAULT VALUE NOT STOPPING ME TO INSERT A NULL VALUE
+    -- SOL WE HAVE TO MAKE NOT NULL
+    INSERT INTO Cats3(NAME, AGE)
+    VALUES (NULL , NULL);
+
+    -- MAKING A NEW TABLE WITH THE RIGHT WAY WITH NOT NULL AND DEFAULT VALUES
+    CREATE TABLE Cats4
+        (
+            Name VARCHAR(100) NOT NULL DEFAULT 'NOT NAMED',
+            Age INT NOT NULL DEFAULT 0
+        );
+
+    INSERT INTO Cats4()
+    VALUES ();
+
+    DESC Cats4;
+
+    -- CREATING A TABLE WITH A PRIMARY KEY WHICH IS ID
+    CREATE TABLE dog
+        (
+            -- PRIMARY KEYS CANNOT NEVER BE NULL
+            -- AUTO INCREMENT HERE
+            dog_id INT AUTO_INCREMENT PRIMARY KEY ,
+            name VARCHAR(50) NOT NULL DEFAULT 'NO NAME',
+            age INT NOT NULL DEFAULT 99
+         );
+
+    DESC dog;
+
+    -- PRIMARY KEY IS USED TO PREVENT THE DUPLICATES VALUES
+    -- SO IT IS UNIQUE FOR EACH ROW
+    INSERT INTO dog( name, age)
+    VALUES ('BONGO',2);
+
+    INSERT INTO dog( name, age)
+    VALUES ('BONGO',2);
+
+    INSERT INTO dog( name, age)
+    VALUES ('BONGO',2);
+
+    DROP TABLE dog;
+
+    DESC dog;
+    SELECT * FROM dog;
+
